@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #6e8efb, #a777e3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    .form-container {
+      background: white;
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+      width: 100%;
+      max-width: 400px;
+    }
+    h2 {
+      margin-bottom: 1rem;
+      color: #333;
+      text-align: center;
+    }
+    input {
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      font-size: 1rem;
+    }
+    button {
+      width: 100%;
+      padding: 0.8rem;
+      background: #6e8efb;
+      color: white;
+      font-size: 1rem;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background: #5c76e3;
+    }
+    .link {
+      text-align: center;
+      margin-top: 1rem;
+      font-size: 0.9rem;
+    }
+    .link a {
+      color: #6e8efb;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Crear cuenta</h2>
+    <form action="https://formcarry.com/s/9m42Y9aaDTf" method="POST">
+      <input type="text" name="name" placeholder="Nombre completo" required>
+      <input type="email" name="email" placeholder="Correo electrónico" required>
+      <input type="password" name="password" placeholder="Contraseña" required><form action="https://formcarry.com/s/TU_FORM_ID" method="POST">
+        <input type="email" name="email" required>
+        <input type="password" name="password" required>
+        <button type="submit">Entrar</button>
+      </form>
+      
+      <button type="submit">Registrarse</button>
+    </form>
+    <div class="link">
+      ¿Ya tienes cuenta? <a href="login.html">Inicia sesión</a>
+    </div>
+  </div>
+</body>
+</html>

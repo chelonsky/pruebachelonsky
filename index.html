@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página Principal</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(120deg, #f093fb, #f5576c);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+    }
+    .container {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 2rem;
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .btn {
+      display: inline-block;
+      margin: 1rem 0.5rem;
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+      color: white;
+      background: rgba(255, 255, 255, 0.2);
+      border: 2px solid white;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    .btn:hover {
+      background: white;
+      color: #f5576c;
+    }
+    .logout {
+      margin-top: 1.5rem;
+      font-size: 0.9rem;
+      cursor: pointer;
+      color: #eee;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container" id="main">
+    <h1 id="greeting">Bienvenido</h1>
+    <div id="buttons">
+      <a href="login.html" class="btn">Iniciar sesión</a>
+      <a href="register.html" class="btn">Registrarse</a>
+    </div>
+    <div id="logout" class="logout" style="display: none;" onclick="logout()">Cerrar sesión</div>
+  </div>
+
+  <script>
+    // Cargar nombre de usuario si ya está guardado
+    const username = localStorage.getItem("username");
+
+    if (username) {
+      document.getElementById("greeting").textContent = `¡Hola, ${username}!`;
+      document.getElementById("buttons").style.display = "none";
+      document.getElementById("logout").style.display = "block";
+    }
+
+    function logout() {
+      localStorage.removeItem("username");
+      location.reload();
+    }
+  </script>
+</body>
+</html>
