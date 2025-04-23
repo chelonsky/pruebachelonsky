@@ -62,18 +62,20 @@
   </div>
 
   <script>
-    // Cargar nombre de usuario si ya está guardado
+    // Verifica si el usuario está logueado
     const username = localStorage.getItem("username");
 
     if (username) {
+      // Si está logueado, muestra mensaje de bienvenida y oculta los botones
       document.getElementById("greeting").textContent = `¡Hola, ${username}!`;
       document.getElementById("buttons").style.display = "none";
       document.getElementById("logout").style.display = "block";
     }
 
+    // Función para cerrar sesión
     function logout() {
-      localStorage.removeItem("username");
-      location.reload();
+      localStorage.removeItem("username");  // Elimina la información del usuario
+      window.location.href = "index.html";   // Redirige a la página principal
     }
   </script>
 </body>
